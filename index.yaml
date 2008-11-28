@@ -10,14 +10,14 @@ indexes:
 # automatically uploaded to the admin console when you next deploy
 # your application using appcfg.py.
 
-# Used 13 times in query history.
+# Unused in query history -- copied from input.
 - kind: QueuedJob
   properties:
   - name: created_at
   - name: priority
     direction: desc
 
-# Used 28 times in query history.
+# Unused in query history -- copied from input.
 - kind: QueuedJob
   properties:
   - name: reserved_at

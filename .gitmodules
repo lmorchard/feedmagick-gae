@@ -1,0 +1,3 @@
+[submodule "extlib/firepython"]
+	path = extlib/firepython
+	url = git://github.com/woid/firepython.git
