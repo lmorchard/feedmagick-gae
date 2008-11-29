@@ -468,10 +468,15 @@ application = webapp.WSGIApplication([('/test', MainTestPageHandler),
                                       debug=True)
 
 def main():
-    base_dir = os.path.dirname(__file__)
+    base_dir = os.path.dirname( os.path.dirname(__file__) )
+    
+    global _DEFAULT_TEST_DIR
+    _DEFAULT_TEST_DIR = os.path.join(base_dir, 'test')
+
     sys.path.extend([ os.path.join(base_dir, d) for d in 
         ( 'lib', 'extlib' ) 
     ])
+    
     import firepython
     from firepython.middleware import FirePythonWSGI
     run_wsgi_app( FirePythonWSGI(application) )

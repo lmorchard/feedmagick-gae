@@ -3,7 +3,7 @@
 """
 # Find library locations relative to the working dir.
 import sys, os
-base_dir = os.path.dirname(__file__)
+base_dir = os.path.dirname( os.path.dirname(__file__) )
 sys.path.extend([ os.path.join(base_dir, d) for d in 
     ( 'lib', 'extlib' ) 
 ])

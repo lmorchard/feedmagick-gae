@@ -4,7 +4,25 @@ runtime: python
 api_version: 1
 
 handlers:
+- url: /favicon.ico
+  static_files: htdocs/favicon.ico
+  upload: htdocs/favicon.ico
+- url: /
+  static_files: htdocs/index.html
+  upload: htdocs/index.html
+- url: /index.html
+  static_files: htdocs/index.html
+  upload: htdocs/index.html
+- url: /queue.html
+  static_files: htdocs/queue.html
+  upload: htdocs/queue.html
+- url: /css
+  static_dir: htdocs/css
+- url: /js
+  static_dir: htdocs/js
+- url: /img
+  static_dir: htdocs/img
 - url: /test.*
-  script: gaeunit.py
+  script: controllers/gaeunit.py
 - url: .*
-  script: main.py
+  script: controllers/main.py
